@@ -1,48 +1,45 @@
-# Clínica Agendamento
+# Clinica Agendamento
 
-Esse projeto nasceu de um desafio pessoal: construir um sistema real do zero em 7 dias, sem pular etapas e sem depender de frameworks prontos. Só Java puro, lógica e vontade de aprender.
+Meu primeiro projeto em Java. Construido do zero em 7 dias seguindo um roadmap de estudos.
 
-## O que ele faz
+## Contexto e Objetivos
 
-O sistema verifica as consultas agendadas e notifica automaticamente os pacientes quando faltam 15 ou 7 dias para a consulta. Durante a notificação, ele pergunta se o paciente confirma a presença e atualiza o status na hora.
+Escolhi Java porque quero entender como sistemas reais sao construidos por dentro. O objetivo foi sair do zero e chegar em algo funcionando e publicado no GitHub.
 
-No final exibe um resumo completo de todas as consultas com as cores indicando cada situação.
+## Fontes Utilizadas
 
-## Como ficou na prática
+- Documentacao oficial do Java: https://docs.oracle.com/en/java/
+- Guia do Maven: https://maven.apache.org/guides/
+- Documentacao do Git: https://git-scm.com/doc
 
-==========================================
-SISTEMA DE AGENDAMENTO - CLÍNICA
+## Engenharia de Prompts e Dificuldades
 
-Olá, João! Sua consulta está marcada para daqui a 15 dias. Deseja confirmar? (sim/não)
-Resposta: sim
-✔ Consulta confirmada com sucesso!
-==========================================
-RESUMO DAS CONSULTAS
-Paciente: João Silva           | Data: 28/05/2026 | Dias:  15 | Status: CONFIRMADO
-Paciente: Maria Souza          | Data: 20/05/2026 | Dias:   7 | Status: CANCELADO
-Paciente: Carlos Lima          | Data: 16/05/2026 | Dias:   3 | Status: PENDENTE
+- Como configurar o Maven no Windows e por que o PATH importa
+- O que e encapsulamento na pratica e por que usar private
+- Como funciona o Git e o que fazer quando da erro no push
 
-## O que aprendi construindo isso
+## O que o sistema faz
 
-Configurar o ambiente do zero no Windows não é trivial. Maven, PATH, JDK — cada um tem seu lugar certo e quando um está errado, nada funciona. Aprendi que entender o erro é mais valioso do que só copiar o comando certo.
+Avisa os pacientes quando faltam 15 ou 7 dias para a consulta e pergunta se confirmam a presenca.
 
-A arquitetura MVC fez sentido na prática. Separar o que é dado, o que é regra e o que é controle deixou o código muito mais fácil de entender e de mexer.
+## Glossario
 
-## Tecnologias
+MVC - Forma de organizar o codigo separando dados, regras e controle.
+Encapsulamento - Proteger os dados de uma classe usando private.
+LocalDate - Classe do Java para trabalhar com datas.
+Maven - Ferramenta que organiza o projeto Java.
+Git - Sistema que registra as mudancas no codigo.
 
-- Java 21
-- Maven 3.9.15
-- IntelliJ IDEA 2026
-- Git e GitHub
+## Prompts Reutilizaveis
 
-## Estrutura do projeto
-com.clinica
-├── Main.java
-├── controller
-│   └── AgendamentoController.java
-├── model
-│   ├── Paciente.java
-│   └── Consulta.java
-└── service
-├── NotificacaoService.java
-└── ConfirmacaoService.java
+- "Explica o que e [conceito] em Java com exemplo pratico"
+- "Porque esta dando esse erro: [colar o erro]"
+- "Revisa esse codigo: [colar o codigo]"
+
+## Como rodar
+
+git clone https://github.com/HebertKevelin/clinica-agendamento.git
+cd clinica-agendamento
+mvn compile
+
+Desenvolvido por Heber Kevelin
